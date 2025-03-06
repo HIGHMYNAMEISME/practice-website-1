@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Website</title>
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-top: 75px;
+    }
+
+    aside {
+      position: fixed;
+      background-color: #fff;
+      width: 15vw;
+      min-width: 150px;
+      left: 0;
+      bottom: 0;
+      top: max(min(60px, 5vw), 50px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 50px;
+      user-select: none;
+    }
+
+    .side-close {
+      position: absolute;
+      right: 5px;
+      top: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 25%;
+      background-color: hsla(200, 100%, 50%, 0);
+      transition: background-color 0.15s;
+      cursor: pointer;
+    }
+
+    .side-close-icon {
+      display: block;
+    }
+
+    .side-open {
+      border: none;
+      background-color: #fff;
+      position: fixed;
+      top: 100px;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      cursor: pointer;
+      padding: none;
+      box-shadow: 0 1px 10px hsl(0, 0%, 50%, 0.3);
+      transition: background-color 0.15s;
+      user-select: none;
+    }
+
+    .side-open-icon {
+      display: block;
+      width: 80%;
+      margin-left: 5px;
+    }
+
+    .side-link {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #000;
+      transition: background-color 0.15s;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    section {
+      width: 50vw;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .section-offset {
+      height: 50px;
+      width: 100%;
+      visibility: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    #paragraph-1 {
+      margin-bottom: 50px;
+    }
+
+    /* PSEUDO CLASSES */
+
+    .side-link:hover,
+    .side-close:hover {
+      background-color: hsla(200, 100%, 50%, 0.5);
+    }
+
+    .side-link:active,
+    .side-close:active {
+      background-color: hsla(200, 100%, 50%, 1);
+    }
+
+    .side-open:hover {
+      background-color: hsl(0, 0%, 95%);
+    }
+
+    .side-open:active {
+      background-color: hsl(0, 0%, 90%);
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="./index.html" class="header-link" draggable="false">Homepage</a>
+      <a href="./public/settings.html" class="header-link" draggable="false">Settings</a>
+    </nav>
+  </header>
+  <main>
+    <button class="side-open" id="sideOpen">
+      <img src="./assets/images/open-icon.svg" class="side-open-icon" draggable="false">
+    </button>
+    <aside id="contents">
+      <button class="side-close" id="sideClose">
+        <img src="./assets/images/close-icon.svg" class="side-close-icon" draggable="false">
+      </button>
+      <h2>Contents</h2>
+      <a href="#paragraph-1" class="side-link" draggable="false">1. Lorem ipsum dolor</a>
+      <a href="#paragraph-2" class="side-link" draggable="false">2. Lorem ipsum dolor</a>
+      <a href="#paragraph-3" class="side-link" draggable="false">3. Lorem ipsum dolor</a>
+      <a href="#paragraph-4" class="side-link" draggable="false">4. Lorem ipsum dolor</a>
+      <a href="#paragraph-5" class="side-link" draggable="false">5. Lorem ipsum dolor</a>
+      <a href="#paragraph-6" class="side-link" draggable="false">6. Lorem ipsum dolor</a>
+    </aside>
+    <h1>Homepage</h1>
+    <div id="paragraph-1" class="section-offset"></div>
+    <section>
+      <h2>1. Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at euismod dui. Proin molestie ipsum in urna molestie, sit amet hendrerit ligula bibendum. Suspendisse elementum mi consectetur, condimentum justo eget, elementum arcu. Praesent eget facilisis libero, at ultrices quam. Sed eu consectetur leo. Aliquam ultricies pretium ligula eget malesuada. Vestibulum laoreet quam iaculis massa pellentesque, non sollicitudin nisl venenatis. Etiam aliquet sem imperdiet, iaculis ipsum ut, eleifend est. Ut vestibulum libero elit, eu egestas urna ornare a. Suspendisse potenti. Aliquam tempor posuere risus. Phasellus faucibus, ligula sit amet fringilla suscipit, elit neque tempor arcu, non molestie tortor enim et augue. Donec imperdiet mi quis metus aliquam pulvinar. Etiam sed lobortis quam. Etiam congue sem ut auctor aliquet.
+      </p>
+      <div id="paragraph-2" class="section-offset"></div>
+    </section>
+    <section>
+      <h2>2. Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at euismod dui. Proin molestie ipsum in urna molestie, sit amet hendrerit ligula bibendum. Suspendisse elementum mi consectetur, condimentum justo eget, elementum arcu. Praesent eget facilisis libero, at ultrices quam. Sed eu consectetur leo. Aliquam ultricies pretium ligula eget malesuada. Vestibulum laoreet quam iaculis massa pellentesque, non sollicitudin nisl venenatis. Etiam aliquet sem imperdiet, iaculis ipsum ut, eleifend est. Ut vestibulum libero elit, eu egestas urna ornare a. Suspendisse potenti. Aliquam tempor posuere risus. Phasellus faucibus, ligula sit amet fringilla suscipit, elit neque tempor arcu, non molestie tortor enim et augue. Donec imperdiet mi quis metus aliquam pulvinar. Etiam sed lobortis quam. Etiam congue sem ut auctor aliquet.
+      </p>
+      <div id="paragraph-3" class="section-offset"></div>
+    </section>
+    <section>
+      <h2>3. Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at euismod dui. Proin molestie ipsum in urna molestie, sit amet hendrerit ligula bibendum. Suspendisse elementum mi consectetur, condimentum justo eget, elementum arcu. Praesent eget facilisis libero, at ultrices quam. Sed eu consectetur leo. Aliquam ultricies pretium ligula eget malesuada. Vestibulum laoreet quam iaculis massa pellentesque, non sollicitudin nisl venenatis. Etiam aliquet sem imperdiet, iaculis ipsum ut, eleifend est. Ut vestibulum libero elit, eu egestas urna ornare a. Suspendisse potenti. Aliquam tempor posuere risus. Phasellus faucibus, ligula sit amet fringilla suscipit, elit neque tempor arcu, non molestie tortor enim et augue. Donec imperdiet mi quis metus aliquam pulvinar. Etiam sed lobortis quam. Etiam congue sem ut auctor aliquet.
+      </p>
+      <div id="paragraph-4" class="section-offset"></div>
+    </section>
+    <section>
+      <h2>4. Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at euismod dui. Proin molestie ipsum in urna molestie, sit amet hendrerit ligula bibendum. Suspendisse elementum mi consectetur, condimentum justo eget, elementum arcu. Praesent eget facilisis libero, at ultrices quam. Sed eu consectetur leo. Aliquam ultricies pretium ligula eget malesuada. Vestibulum laoreet quam iaculis massa pellentesque, non sollicitudin nisl venenatis. Etiam aliquet sem imperdiet, iaculis ipsum ut, eleifend est. Ut vestibulum libero elit, eu egestas urna ornare a. Suspendisse potenti. Aliquam tempor posuere risus. Phasellus faucibus, ligula sit amet fringilla suscipit, elit neque tempor arcu, non molestie tortor enim et augue. Donec imperdiet mi quis metus aliquam pulvinar. Etiam sed lobortis quam. Etiam congue sem ut auctor aliquet.
+      </p>
+      <div id="paragraph-5" class="section-offset"></div>
+    </section>
+    <section>
+      <h2>5. Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at euismod dui. Proin molestie ipsum in urna molestie, sit amet hendrerit ligula bibendum. Suspendisse elementum mi consectetur, condimentum justo eget, elementum arcu. Praesent eget facilisis libero, at ultrices quam. Sed eu consectetur leo. Aliquam ultricies pretium ligula eget malesuada. Vestibulum laoreet quam iaculis massa pellentesque, non sollicitudin nisl venenatis. Etiam aliquet sem imperdiet, iaculis ipsum ut, eleifend est. Ut vestibulum libero elit, eu egestas urna ornare a. Suspendisse potenti. Aliquam tempor posuere risus. Phasellus faucibus, ligula sit amet fringilla suscipit, elit neque tempor arcu, non molestie tortor enim et augue. Donec imperdiet mi quis metus aliquam pulvinar. Etiam sed lobortis quam. Etiam congue sem ut auctor aliquet.
+      </p>
+      <div id="paragraph-6" class="section-offset"></div>
+    </section>
+    <section>
+      <h2>6. Lorem ipsum dolor</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce at euismod dui. Proin molestie ipsum in urna molestie, sit amet hendrerit ligula bibendum. Suspendisse elementum mi consectetur, condimentum justo eget, elementum arcu. Praesent eget facilisis libero, at ultrices quam. Sed eu consectetur leo. Aliquam ultricies pretium ligula eget malesuada. Vestibulum laoreet quam iaculis massa pellentesque, non sollicitudin nisl venenatis. Etiam aliquet sem imperdiet, iaculis ipsum ut, eleifend est. Ut vestibulum libero elit, eu egestas urna ornare a. Suspendisse potenti. Aliquam tempor posuere risus. Phasellus faucibus, ligula sit amet fringilla suscipit, elit neque tempor arcu, non molestie tortor enim et augue. Donec imperdiet mi quis metus aliquam pulvinar. Etiam sed lobortis quam. Etiam congue sem ut auctor aliquet.
+      </p>
+    </section>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
